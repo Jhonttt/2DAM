@@ -7,8 +7,7 @@ public class Ejercicio4 {
   private static String[] directories = { "datos", "copias", "informes" };
 
   private static void createWithFile() {
-    for (String dir : directories) {
-      new File("proyecto/" + dir).mkdirs();
+    for (String dir : directories) { new File("proyecto/" + dir).mkdirs();
     }
   }
 
