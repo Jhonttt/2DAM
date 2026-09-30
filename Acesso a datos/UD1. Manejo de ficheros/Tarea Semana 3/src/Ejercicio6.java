@@ -14,12 +14,16 @@ public class Ejercicio6 {
       System.out.printf("Palabra a buscar: ");
       String word = BR.readLine();
 
-      while ((line = br.readLine()) != null) {
-        if (line.contains(word))
-          lines++;
+      if (!word.isBlank()) {
+        while ((line = br.readLine()) != null) {
+          if (line.contains(word))
+            lines++;
+        }
+        System.out.printf("La palabra %s sale en %d %s.%n", word, lines, lines == 1 ? "línea" : "líneas");
+      } else {
+        System.out.println("Palabra no válida");
       }
 
-      System.out.printf("La palabra %s sale en %d %s.%n", word, lines, lines == 1 ? "línea" : "líneas");
     } catch (Exception e) {
       System.err.println("Error: " + e.getMessage());
     }
