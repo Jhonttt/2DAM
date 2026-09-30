@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Ejercicio11 {
-
   private static final String CSV_NAME = "alumnos.csv";
 
   public static void main(String[] args) {
