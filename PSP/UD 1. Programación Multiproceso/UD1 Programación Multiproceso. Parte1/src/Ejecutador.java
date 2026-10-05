@@ -1,27 +1,28 @@
 import java.io.*;
 
 public class Ejecutador {
-    public static void main(String[] args) throws IOException {
-        // creamos objeto File al directorio donde está Ejemplo2
-        File d = new File("bin");
-        // proceso a ejecutar es Ejemplo2
-        ProcessBuilder pb = new ProcessBuilder("java", "LeerNombre", args[args.length - 1]);// java es el comando para ejecutar un class
-        // establecemos el directorio donde está el ejecutable
-        pb.directory(d);
-        System.out.print("Directorio de trabajo: ");
-        System.out.println(pb.directory());
-        // ejecutar proceso
+    public static void main(String[] args) throws IOException, InterruptedException {
+        if (args.length == 0) {
+            System.out.printf("Valor devuelto por waitFor(): %d", -1);
+            System.exit(-1); 
+        } 
+
+        ProcessBuilder pb = new ProcessBuilder("java", "-cp", "bin", "LeerNombre", args[args.length - 1]);
+
         Process p = pb.start();
-        // obtener la salida
-        try {
-            InputStream is = p.getInputStream();
-            int c;
-            while ((c = is.read()) != -1) {
-                System.out.print((char) c);
+
+        try (BufferedReader bf = new BufferedReader(new InputStreamReader(p.getInputStream()))) {
+            String linea;
+
+            while ((linea = bf.readLine()) != null) {
+                System.out.println(linea);
             }
-            is.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) {
+            System.err.println("Error de entrada/salida: " + e.getMessage());
+        } 
+
+        int codigo = p.waitFor();
+        System.out.printf("Valor devuelto por waitFor(): %d", codigo);
+
     }
 }
