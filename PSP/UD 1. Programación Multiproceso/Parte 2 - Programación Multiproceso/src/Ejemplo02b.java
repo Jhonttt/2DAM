@@ -1,6 +1,10 @@
 import java.io.*;
 
 public class Ejemplo02b {
+    /** 
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         // Ejecutamos el proceso DIR
         Process p = new ProcessBuilder("CMD", "/C", "DIRR").start();

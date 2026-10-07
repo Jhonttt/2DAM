@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generar Javadoc HTML",
+            "type": "shell",
+            "command": "javadoc -encoding UTF-8 -docencoding UTF-8 -charset UTF-8 -private -author -version -d javadoc (Get-ChildItem src -Filter *.java).FullName",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "shell": { "executable": "powershell.exe", "args": ["-NoProfile", "-Command"] }
+            },
+            "problemMatcher": []
+        }
+    ]
+}
