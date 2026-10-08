@@ -15,8 +15,8 @@ public class Ejercicio1 {
         max = min = temperatures[0];
 
         for (Double t : temperatures) {
-            Math.max(max, t);
-            Math.min(min, t);
+            max = Math.max(max, t);
+            min = Math.min(min, t);
             sum += t;
         }
 
@@ -30,6 +30,11 @@ public class Ejercicio1 {
         Map<String, Double> result = minMaxAvg();
 
         try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("temperaturas.dat"))) {
+            dos.writeInt(temperatures.length);
+            for (Double t : temperatures) {
+                dos.writeDouble(t);
+            }
+
             dos.writeDouble(result.get("avg"));
             dos.writeDouble(result.get("max"));
             dos.writeDouble(result.get("min"));
@@ -38,7 +43,19 @@ public class Ejercicio1 {
         }
 
         try (DataInputStream dis = new DataInputStream(new FileInputStream("temperaturas.dat"))) {
-            String line;
+            int n = dis.readInt();
+            System.out.println("Temperaturas:");
+            for (int i = 0; i < n; i++) {
+                System.out.printf("  %.2f%n", dis.readDouble());
+            }
+
+            double avg = dis.readDouble();
+            double max = dis.readDouble();
+            double min = dis.readDouble();
+
+            System.out.printf("Media: %.2f%nMáxima: %.2f%nMínima: %.2f%n", avg, max, min);
+        } catch (IOException e) {
+            System.err.println("Error de entrada/salida: " + e.getMessage());
         }
     }
 }
