@@ -2,6 +2,7 @@ package ejercicio11;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,8 +11,6 @@ import java.io.ObjectOutputStream;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-
-import ejercicio7.Libro;
 
 public class Ejercicio11 {
   private static final String RESET = "\u001B[0m";
@@ -23,30 +22,32 @@ public class Ejercicio11 {
 
   private static void loadClients() {
     try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FICHERO.toFile()))) {
-      List<Libro> loadedBooks = new ArrayList<>();
+      List<Cliente> loadedClients = new ArrayList<>();
 
       for (Object obj : (List<?>) ois.readObject()) {
-        if (obj instanceof Libro libro) {
-          loadedBooks.add(libro);
+        if (obj instanceof Cliente cliente) {
+          loadedClients.add(cliente);
         }
       }
 
-      libros = loadedBooks;
-      System.out.println(GREEN + "\nLibros cargados correctamente" + RESET);
+      clientes = loadedClients;
+      System.out.println(GREEN + "\nClientes cargados correctamente" + RESET);
+    } catch (FileNotFoundException e) {
+      System.out.println(RED + "\nNo se ha encontrado el archivo: " + FICHERO + RESET);
     } catch (IOException | ClassNotFoundException e) {
       System.out.println(RED + "\nError al leer el archivo: " + e.getMessage() + RESET);
     }
   }
 
   private static void saveClients() {
-    if (libros.isEmpty()) {
-      System.out.println(RED + "\nNo hay libros para guardar" + RESET);
+    if (clientes.isEmpty()) {
+      System.out.println(RED + "\nNo hay clientes para guardar" + RESET);
       return;
     }
 
     try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FICHERO.toFile()))) {
-      oos.writeObject(libros);
-      System.out.println(GREEN + "\nLibros guardados correctamente" + RESET);
+      oos.writeObject(clientes);
+      System.out.println(GREEN + "\nClientes guardados correctamente" + RESET);
     } catch (IOException e) {
       System.out.println(RED + "Error de E/S al escribir: " + e.getMessage() + RESET);
     }
@@ -55,7 +56,12 @@ public class Ejercicio11 {
   private static void deleteClient() {
     while (true) {
       try {
-        System.out.println("Introduce el código a eliminar: ");
+        if (clientes.isEmpty()) {
+          System.out.println(RED + "\nNo hay clientes para eliminar" + RESET);
+          return;
+        }
+
+        System.out.print("Introduce el código a eliminar: ");
         int searchCode = Integer.parseInt(BR.readLine());
         if (searchCode <= 0) {
           System.err.println(RED + "Introduce un código a buscar válido (> 0)\n" + RESET);
@@ -68,9 +74,10 @@ public class Ejercicio11 {
           System.out.println(RED + "No se ha encontrado ningún cliente con el código " + searchCode + RESET);
           return;
         }
-        
+
         clientes.remove(found);
-        System.out.println(GREEN + "Cliente " + found.getNombre() + "con el código " + searchCode + " eliminado" + RESET);
+        System.out
+            .println(GREEN + "Cliente " + found.getNombre() + "con el código " + searchCode + " eliminado" + RESET);
         return;
       } catch (IOException | NumberFormatException e) {
         System.err.println(RED + "Error: Formato numérico incorrecto. Por favor, inténtalo de nuevo.\n" + RESET);
@@ -81,7 +88,12 @@ public class Ejercicio11 {
   private static void searchClient() {
     while (true) {
       try {
-        System.out.println("Introduce el código a buscar: ");
+        if (clientes.isEmpty()) {
+          System.out.println(RED + "\nNo hay clientes para buscar" + RESET);
+          return;
+        }
+
+        System.out.print("\nIntroduce el código a buscar: ");
         int searchCode = Integer.parseInt(BR.readLine());
         if (searchCode <= 0) {
           System.err.println(RED + "Introduce un código a buscar válido (> 0)\n" + RESET);
@@ -106,7 +118,7 @@ public class Ejercicio11 {
 
   private static void listClients() {
     if (clientes.isEmpty()) {
-      System.out.println(RED + "\nNo hay clientes registrados" + RESET);
+      System.out.println(RED + "\nNo hay clientes para listar" + RESET);
       return;
     }
     System.out.println(GREEN + "\nListando clientes..." + RESET);
@@ -188,7 +200,7 @@ public class Ejercicio11 {
       System.out.printf("2. Mostrar clientes%n");
       System.out.printf("3. Buscar cliente%n");
       System.out.printf("4. Eliminar cliente%n");
-      System.out.printf("5. Guardar coppia de seguridad%n");
+      System.out.printf("5. Guardar copia de seguridad%n");
       System.out.printf("6. Recuperar copia de seguridad%n");
       System.out.printf("%s0. Salir%s%n", RED, RESET);
       System.out.printf("Opción: ");
@@ -196,7 +208,7 @@ public class Ejercicio11 {
         option = Integer.parseInt(BR.readLine().trim());
         options(option);
       } catch (IOException | NumberFormatException e) {
-        System.err.println(RED + "Introduce un número correcto" + RESET);
+        System.err.println(RED + "\nIntroduce un número correcto" + RESET);
         option = -1;
       }
     } while (option != 0);
