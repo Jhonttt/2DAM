@@ -6,6 +6,14 @@ public class Usuario implements Serializable {
   private static final long serialVersionUID = 1L;
   private String nombre;
   private String email;
+
+  // transient indica que este atributo no se serializa, así que la contraseña
+  // nunca se escribe en el fichero. Al deserializar, Java no ejecuta el
+  // constructor de Usuario y deja los atributos transient con su valor por
+  // defecto: null en los objetos, 0 en los números y false en los boolean. Por
+  // eso, después de leer el usuario, password vale null. Nombre y email sí se
+  // recuperan con sus valores originales.
+
   private transient String password;
 
   public Usuario(String nombre, String email, String password) {

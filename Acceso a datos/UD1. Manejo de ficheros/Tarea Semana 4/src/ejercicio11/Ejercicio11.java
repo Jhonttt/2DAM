@@ -61,7 +61,7 @@ public class Ejercicio11 {
           return;
         }
 
-        System.out.print("Introduce el código a eliminar: ");
+        System.out.print("\nIntroduce el código a eliminar: ");
         int searchCode = Integer.parseInt(BR.readLine());
         if (searchCode <= 0) {
           System.err.println(RED + "Introduce un código a buscar válido (> 0)\n" + RESET);
@@ -77,7 +77,7 @@ public class Ejercicio11 {
 
         clientes.remove(found);
         System.out
-            .println(GREEN + "Cliente " + found.getNombre() + "con el código " + searchCode + " eliminado" + RESET);
+            .println(GREEN + "Cliente " + found.getNombre() + " con el código " + searchCode + " eliminado" + RESET);
         return;
       } catch (IOException | NumberFormatException e) {
         System.err.println(RED + "Error: Formato numérico incorrecto. Por favor, inténtalo de nuevo.\n" + RESET);
