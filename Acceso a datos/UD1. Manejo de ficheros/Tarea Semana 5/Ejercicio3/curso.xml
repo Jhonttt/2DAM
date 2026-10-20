@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso>
+  <nombre>Desarrollo de Aplicaciones Multiplataforma</nombre>
+  <aula>100</aula>
+  <profesor>
+    <nombre>Victor</nombre>
+    <apellidos>Perikito Perikin</apellidos>
+  </profesor>
+  <alumnos>
+    <alumno>
+      <id>1</id>
+      <nombre>Lucía</nombre>
+      <ciclo>DAM</ciclo>
+    </alumno>
+    <alumno>
+      <id>2</id>
+      <nombre>Mario</nombre>
+      <ciclo>DAM</ciclo>
+    </alumno>
+    <alumno>
+      <id>1</id>
+      <nombre>Juan</nombre>
+      <ciclo>DAM</ciclo>
+    </alumno>
+  </alumnos>
+</curso>

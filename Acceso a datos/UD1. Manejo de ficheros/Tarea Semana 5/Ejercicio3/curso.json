@@ -1,0 +1,13 @@
+{
+  "nombre": "Desarrollo de Aplicaciones Multiplataforma",
+  "aula": 100,
+  "profesor": {
+    "nombre": "Victor",
+    "apellidos": "Perikito Perikin"
+  },
+  "alumnos": [
+    { "id": 1, "nombre": "Lucía", "edad": 19, "ciclo": "DAM" },
+    { "id": 2, "nombre": "Mario", "edad": 20, "ciclo": "DAM" },
+    { "id": 3, "nombre": "Juan", "edad": 22, "ciclo": "DAM" }
+  ]
+}
