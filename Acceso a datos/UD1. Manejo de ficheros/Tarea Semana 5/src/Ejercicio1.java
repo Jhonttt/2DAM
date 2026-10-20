@@ -11,7 +11,7 @@ import org.xml.sax.SAXException;
 
 public class Ejercicio1 {
 
-    private static final File FICHERO = new File("./catalogo_libros.xml");
+    private static final File FICHERO = new File("./Ejercicio1/catalogo_libros.xml");
 
     private static final String RESET = "\u001B[0m";
     private static final String ROJO = "\u001B[91m";
