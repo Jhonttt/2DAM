@@ -1,0 +1,9 @@
+{
+  "alumnos": [
+    { "id": 1, "nombre": "Lucía", "edad": 19, "ciclo": "DAM" },
+    { "id": 2, "nombre": "Mario", "edad": 20, "ciclo": "ASIR" },
+    { "id": 3, "nombre": "Juan", "edad": 22, "ciclo": "DAM" },
+    { "id": 4, "nombre": "Santi", "edad": 21, "ciclo": "DAW" },
+    { "id": 5, "nombre": "Eric", "edad": 21, "ciclo": "ASIR" }
+  ]
+}

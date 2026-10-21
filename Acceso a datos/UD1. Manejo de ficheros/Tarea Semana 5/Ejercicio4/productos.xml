@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+  <producto>
+    <codigo>1</codigo>
+    <nombre>Portátil Lenovo IdeaPad</nombre>
+    <categoria>Informática</categoria>
+    <precio>649.99</precio>
+    <unidadesDisponibles>15</unidadesDisponibles>
+  </producto>
+  <producto>
+    <codigo>2</codigo>
+    <nombre>Ratón Logitech G203</nombre>
+    <categoria>Periféricos</categoria>
+    <precio>29.99</precio>
+    <unidadesDisponibles>40</unidadesDisponibles>
+  </producto>
+  <producto>
+    <codigo>3</codigo>
+    <nombre>Monitor Samsung 27 pulgadas</nombre>
+    <categoria>Monitores</categoria>
+    <precio>189.90</precio>
+    <unidadesDisponibles>12</unidadesDisponibles>
+  </producto>
+  <producto>
+    <codigo>4</codigo>
+    <nombre>Teclado mecánico Redragon K552</nombre>
+    <categoria>Periféricos</categoria>
+    <precio>54.95</precio>
+    <unidadesDisponibles>25</unidadesDisponibles>
+  </producto>
+  <producto>
+    <codigo>5</codigo>
+    <nombre>SSD Kingston NV2 1TB</nombre>
+    <categoria>Almacenamiento</categoria>
+    <precio>69.99</precio>
+    <unidadesDisponibles>30</unidadesDisponibles>
+  </producto>
+</productos>
