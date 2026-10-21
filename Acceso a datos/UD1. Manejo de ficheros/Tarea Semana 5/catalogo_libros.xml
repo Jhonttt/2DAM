@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+  <libro id="L01">
+    <titulo>Redes</titulo>
+    <autor>Ana Ruiz</autor>
+    <precio>24.50</precio>
+  </libro>
+  <libro id="L02">
+    <titulo>Java práctico</titulo>
+    <autor>Mario León</autor>
+    <precio>29.90</precio>
+  </libro>
+  <libro id="L03">
+    <titulo>Bases de datos</titulo>
+    <autor>Eva Gil</autor>
+    <precio>32.00</precio>
+  </libro>
+  <libro id="L04">
+    <titulo>Sistemas Linux</titulo>
+    <autor>Leo Martín</autor>
+    <precio>21.75</precio>
+  </libro>
+  <libro id="L05">
+    <titulo>Programación web</titulo>
+    <autor>Sara Díaz</autor>
+    <precio>26.80</precio>
+  </libro>
+</biblioteca>
