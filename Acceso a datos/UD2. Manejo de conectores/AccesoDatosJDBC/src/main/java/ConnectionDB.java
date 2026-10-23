@@ -10,6 +10,8 @@ public final class ConnectionDB {
             .ignoreIfMissing()
             .load();
 
+    private ConnectionDB() {}
+
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(
                 env.get("DB_URL"),

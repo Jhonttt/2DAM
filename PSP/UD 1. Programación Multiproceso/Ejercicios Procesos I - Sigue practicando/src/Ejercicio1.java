@@ -26,13 +26,17 @@ public class Ejercicio1 {
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.print(BLUE + "Introduce un número del cual se sacaran los divisores: " + WHITE);
-
-        String n1 = BR.readLine();
-
-        if (!isNumber(n1)) {
-            System.out.println(RED + "Introduce un argumento válido." + RESET);
-            System.exit(2);
+        String n1 = "";
+        while (true) { 
+            System.out.print(BLUE + "Introduce un número del cual se sacaran los divisores: " + WHITE);
+    
+            n1 = BR.readLine();
+    
+            if (!isNumber(n1)) {
+                System.out.println(RED + "Introduce un argumento válido.\n" + RESET);
+                continue;
+            }
+            break;
         }
 
         double n = Double.parseDouble(normalize(n1));
