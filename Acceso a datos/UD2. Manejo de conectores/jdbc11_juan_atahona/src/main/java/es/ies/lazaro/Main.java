@@ -1,4 +1,4 @@
-package com.example;
+package es.ies.lazaro;
 
 public class Main {
     public static void main(String[] args) {

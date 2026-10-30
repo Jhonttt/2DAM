@@ -1,0 +1,8 @@
+DROP DATABASE IF EXISTS Alumnos01;
+
+CREATE DATABASE Alumnos01;
+
+USE Alumnos01;
+
+CREATE TABLE
+  alumnos (INT )

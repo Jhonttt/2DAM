@@ -26,13 +26,13 @@ public class AlumnoDAO {
     return null;
   }
 
-  public static List<Alumno> selectAlumnosByCicle(String ciclo) {
+  public static List<Alumno> selectAlumnosByCicle(String cicle) {
     String sql = "SELECT * FROM alumnos WHERE ciclo = ? ORDER BY nombre";
     List<Alumno> alumnos = new ArrayList<>();
     try (Connection con = ConexionInicial.getConnection();
         PreparedStatement ps = con.prepareStatement(sql)) {
 
-      ps.setString(1, ciclo);
+      ps.setString(1, cicle);
 
       try (ResultSet rs = ps.executeQuery()) {
         while (rs.next()) {
@@ -48,13 +48,15 @@ public class AlumnoDAO {
     }
     return null;
   }
-  public static List<Alumno> selectAlumnosByCicleAndAge(String ciclo, int age) {
-    String sql = "SELECT * FROM alumnos WHERE ciclo = ? ORDER BY edad";
+
+  public static List<Alumno> selectAlumnosByCicleAndAge(String cicle, int age) {
+    String sql = "SELECT * FROM alumnos WHERE ciclo = ? AND edad >= ? ORDER BY edad";
     List<Alumno> alumnos = new ArrayList<>();
     try (Connection con = ConexionInicial.getConnection();
         PreparedStatement ps = con.prepareStatement(sql)) {
 
-      ps.setString(1, ciclo);
+      ps.setString(1, cicle);
+      ps.setInt(2, age);
 
       try (ResultSet rs = ps.executeQuery()) {
         while (rs.next()) {
@@ -69,5 +71,25 @@ public class AlumnoDAO {
       System.err.println(Colors.RED + "Error de MySQL: " + e.getMessage() + Colors.RESET);
     }
     return null;
+  }
+
+  public static void selectSummaryStudents() {
+    String sql = "SELECT ciclo, COUNT(*) as total, AVG(edad) as edad_media FROM alumnos GROUP BY ciclo";
+    try (Connection con = ConexionInicial.getConnection();
+        PreparedStatement ps = con.prepareStatement(sql)) {
+
+      try (ResultSet rs = ps.executeQuery()) {
+        while (rs.next()) {
+          System.out.printf("%s | %d alumnos | edad media: %.1f%n",
+              rs.getString("ciclo"),
+              rs.getInt("total"),
+              rs.getDouble("edad_media"));
+        }
+      }
+
+      System.out.println();
+    } catch (Exception e) {
+      System.err.println(Colors.RED + "Error de MySQL: " + e.getMessage() + Colors.RESET);
+    }
   }
 }
