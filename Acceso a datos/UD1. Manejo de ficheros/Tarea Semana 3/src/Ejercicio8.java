@@ -12,7 +12,6 @@ public class Ejercicio8 {
       while ((line = br.readLine()) != null) {
         String[] fields = line.split(";");
 
-
         System.out.printf("%s (%d años) - %s%n", fields[1], Integer.parseInt(fields[2]), fields[3]);
       }
     } catch (Exception e) {
