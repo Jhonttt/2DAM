@@ -33,6 +33,8 @@ public class Main {
     private static final String WORDS = "[\\p{L}\\d]+( [\\p{L}\\d]+)*";
     private static final Path STUDENTS_CSV = Path.of("students.csv");
     private static final Path STUDENTS_JSON = Path.of("students.json");
+    private static final int MIN_AGE = 17;
+    private static final int MAX_AGE = 120;
 
     private static class CancelledException extends RuntimeException {
     }
@@ -89,10 +91,18 @@ public class Main {
         try {
             date = LocalDate.parse(s);
         } catch (DateTimeParseException e) {
-            throw new IllegalArgumentException("Fecha de nacimiento: formato aaaa-mm-dd");
+            throw new IllegalArgumentException("Fecha de nacimiento: formato aaaa-mm-dd (Ej: 2004-04-04)");
         }
-        if (date.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("Fecha de nacimiento: no puede ser futura");
+        LocalDate today = LocalDate.now();
+
+        if (date.getYear() > today.getYear() - MIN_AGE) {
+            throw new IllegalArgumentException(
+                    "Fecha de nacimiento: el alumno debe cumplir al menos " + MIN_AGE + " años este año");
+        }
+
+        if (date.isBefore(today.minusYears(MAX_AGE))) {
+            throw new IllegalArgumentException(
+                    "Fecha de nacimiento: no puede tener más de " + MAX_AGE + " años");
         }
         return date;
     }
@@ -263,13 +273,37 @@ public class Main {
         try {
             while (true) {
                 lastName = ask("Apellidos", validated("Apellidos", 100, LETTERS, onlyLetters));
-                int deleted = AlumnoDAO.deleteStudentByLastName(lastName);
+                int deletRows = AlumnoDAO.countStudentsByLastName(lastName);
 
-                if (deleted > 0) {
-                    System.out.println(Colors.GREEN + "Se " + (deleted == 1 ? "ha eliminado " : "han eliminado ")
-                            + deleted + (deleted == 1 ? " alumno" : " alumnos")
-                            + " con apellido " + lastName);
-                    break;
+                while (deletRows > 0) {
+                    System.out
+                            .print(Colors.BLUE + "¿Desea eliminar "
+                                    + (deletRows > 1 ? "las " + Colors.RED + deletRows + Colors.BLUE + " coincidencias"
+                                            : "la" + Colors.RED + " coincidecnia" + Colors.BLUE)
+                                    + " (N/y): " + Colors.WHITE);
+                    String confirmDelete = BR.readLine();
+
+                    if (confirmDelete == null) {
+                        System.out.println(Colors.RED + "\nSaliendo...");
+                        System.exit(2);
+
+                    }
+                    if (confirmDelete.equalsIgnoreCase("y") || confirmDelete.equalsIgnoreCase("yes")
+                            || confirmDelete.equalsIgnoreCase("s") || confirmDelete.equalsIgnoreCase("si")) {
+                        AlumnoDAO.deleteStudentByLastName(lastName);
+                        System.out.println(Colors.GREEN + "Se " + (deletRows == 1 ? "ha eliminado " : "han eliminado ")
+                                + deletRows + (deletRows == 1 ? " alumno" : " alumnos")
+                                + " cuyo apellido contenía " + lastName);
+                        return;
+                    }
+                    if (confirmDelete.equalsIgnoreCase("n") || confirmDelete.equalsIgnoreCase("no")
+                            || confirmDelete.equalsIgnoreCase("cancelar")) {
+                        System.out
+                                .println(Colors.GREEN + "No se " + (deletRows == 1 ? "ha eliminado " : "han eliminado ")
+                                        + deletRows + (deletRows == 1 ? " alumno" : " alumnos"));
+                        return;
+                    }
+
                 }
 
                 System.out.println(Colors.RED + "No existe un usuario que su apellido contenga " + lastName
@@ -351,7 +385,7 @@ public class Main {
             case 7 -> deleteStudentByLastName();
             case 8 -> saveStudentsJson();
             case 9 -> loadStudentsJson();
-            default -> System.err.println(Colors.RED + "Opción no disponible todavía." + Colors.RESET);
+            default -> System.err.println(Colors.RED + "Opción no disponible todavía.");
         }
     }
 
@@ -368,7 +402,7 @@ public class Main {
                 System.out.print(Colors.RESET);
 
                 if (option == null) {
-                    System.out.println(Colors.RED + "\nSaliendo..." + Colors.RESET);
+                    System.out.println(Colors.RED + "\nSaliendo...");
                     break;
                 }
 
@@ -379,17 +413,17 @@ public class Main {
                 int op = Integer.parseInt(option.trim());
 
                 if (op == 0) {
-                    System.out.println(Colors.RED + "Saliendo..." + Colors.RESET);
+                    System.out.println(Colors.RED + "Saliendo...");
                     break;
                 }
 
                 options(op);
             } catch (IOException e) {
-                System.err.println(Colors.RED + "Error de entrada/salida: " + e.getMessage() + Colors.RESET);
+                System.err.println(Colors.RED + "Error de entrada/salida: " + e.getMessage());
             } catch (NumberFormatException e) {
-                System.err.println(Colors.RED + "Error de formato: " + e.getMessage() + Colors.RESET);
+                System.err.println(Colors.RED + "Error de formato: " + e.getMessage());
             } catch (IllegalArgumentException e) {
-                System.err.println(Colors.RED + "Argumento no válido: " + e.getMessage() + Colors.RESET);
+                System.err.println(Colors.RED + "Argumento no válido: " + e.getMessage());
             }
         }
 

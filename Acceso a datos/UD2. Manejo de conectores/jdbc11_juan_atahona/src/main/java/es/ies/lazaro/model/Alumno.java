@@ -12,6 +12,9 @@ public class Alumno {
   private String course;
   private String group;
 
+  public Alumno() {
+  }
+
   public Alumno(int nia, String name, String lastName, String gender, LocalDate birthDate, String cycle, String course,
       String group) {
     this.nia = nia;

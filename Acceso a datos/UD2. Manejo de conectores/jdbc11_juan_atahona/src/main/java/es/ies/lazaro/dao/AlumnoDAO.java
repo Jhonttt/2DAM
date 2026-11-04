@@ -153,13 +153,30 @@ public class AlumnoDAO {
   }
 
   public static int deleteStudentByLastName(String lastName) {
-    String sql = "DELETE FROM alumno WHERE CONCAT(' ', Apellidos, ' ') LIKE CONCAT('% ', ?, ' %')";
+    String sql = "DELETE FROM alumno WHERE Apellidos LIKE CONCAT('%', ?, '%')";
     try (Connection con = ConnectionDB.getConnection();
         PreparedStatement ps = con.prepareStatement(sql)) {
 
       ps.setString(1, lastName);
 
       return ps.executeUpdate();
+    } catch (SQLException e) {
+      System.err.println(Colors.RED + "Error en la base de datos: " + e.getMessage());
+      return 0;
+    }
+  }
+
+  public static int countStudentsByLastName(String lastName) {
+    String sql = "SELECT COUNT(*) FROM alumno WHERE Apellidos LIKE CONCAT('%', ?, '%')";
+    try (Connection con = ConnectionDB.getConnection();
+        PreparedStatement ps = con.prepareStatement(sql)) {
+
+      ps.setString(1, lastName);
+
+      try (ResultSet rs = ps.executeQuery()) {
+        rs.next();
+        return rs.getInt(1);
+      }
     } catch (SQLException e) {
       System.err.println(Colors.RED + "Error en la base de datos: " + e.getMessage());
       return 0;
