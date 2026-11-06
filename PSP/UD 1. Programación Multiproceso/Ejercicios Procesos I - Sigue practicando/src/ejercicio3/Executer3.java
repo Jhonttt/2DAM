@@ -14,7 +14,7 @@ public class Executer3 {
   public static void main(String[] args) throws IOException, InterruptedException {
     Process p = new ProcessBuilder("java", "-Dstdout.encoding=UTF-8", "-Dstderr.encoding=UTF-8",
         "-cp", "bin", "ejercicio3.Ejercicio3").start();
-
+¡
     try (BufferedWriter toChild = new BufferedWriter(new OutputStreamWriter(p.getOutputStream()));
          BufferedReader fromChild = new BufferedReader(new InputStreamReader(p.getInputStream()))) {
 
