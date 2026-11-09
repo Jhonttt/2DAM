@@ -17,6 +17,7 @@ public class Ejercicio2 {
     System.out.printf("Ruta absoluta: %s\n", f.getAbsolutePath());
     System.out.printf("¿Existe?: %s\n", f.exists() ? "Si" : "No");
     System.out.printf("¿Fichero?: %s\n", f.isFile() ? "Si" : "No");
+    System.out.printf("¿Directorio?: %s\n", f.isDirectory() ? "Si" : "No");
     System.out.printf("Tamaño en bytes: %s\n", f.length());
   }
 }

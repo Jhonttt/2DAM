@@ -11,7 +11,18 @@ public class GestorBasicoDeArchivos {
 
   private static Path fileName(String mensaje) throws IOException {
     System.out.printf("%s: ", mensaje);
-    return ALMACEN.resolve(BR.readLine());
+    String entrada = BR.readLine();
+    if (entrada == null) {
+      throw new IOException("no se ha recibido ninguna entrada");
+    }
+
+    Path base = ALMACEN.toAbsolutePath().normalize();
+    Path p = base.resolve(entrada.trim()).normalize();
+
+    if (!p.startsWith(base) || p.equals(base)) {
+      throw new IOException("la ruta '" + entrada.trim() + "' queda fuera de " + ALMACEN);
+    }
+    return p;
   }
 
   private static boolean exists(Path p) {
@@ -39,7 +50,7 @@ public class GestorBasicoDeArchivos {
       }
       System.out.printf("%s creado%n", p);
     } catch (IOException e) {
-      System.err.println("Error: " + e);
+      System.err.println("Error " + (folder ? "al crear la carpeta" : "al crear el fichero") + ": " + e.getMessage());
     }
   }
 
@@ -74,7 +85,7 @@ public class GestorBasicoDeArchivos {
       System.out.printf("Tamaño: %d bytes%n", Files.size(p));
       System.out.printf("Última modificación: %s%n", Files.getLastModifiedTime(p));
     } catch (IOException e) {
-      System.err.println("Error: " + e);
+      System.err.println("Error al mostrar la información del fichero: " + e.getMessage());
     }
   }
 
@@ -92,7 +103,7 @@ public class GestorBasicoDeArchivos {
       }
       System.out.printf("%s -> %s%n", origen, destino);
     } catch (IOException e) {
-      System.err.println("Error: " + e);
+      System.err.println("Error " + (copy ? "al copiar el fichero" : "al mover el fichero") + ": " + e.getMessage());
     }
   }
 
@@ -105,45 +116,27 @@ public class GestorBasicoDeArchivos {
       Files.delete(p);
       System.out.printf("%s eliminado%n", p);
     } catch (IOException e) {
-      System.err.println("Error: " + e);
+      System.err.println("Error al eliminar el fichero: " + e.getMessage());
     }
   }
 
   private static void options(int o) {
     switch (o) {
-      case 0:
-        System.out.println("Saliendo del proyecto...");
-        break;
-      case 1:
-        existsOrNot(true);
-        break;
-      case 2:
-        existsOrNot(false);
-        break;
-      case 3:
-        listContent();
-        break;
-      case 4:
-        fileInfo();
-        break;
-      case 5:
-        copyOrMove(true);
-        break;
-      case 6:
-        copyOrMove(false);
-        break;
-      case 7:
-        deleteFile();
-        break;
+      case 0 -> System.out.println("Saliendo del proyecto...");
+      case 1 -> existsOrNot(true);
+      case 2 -> existsOrNot(false);
+      case 3 -> listContent();
+      case 4 -> fileInfo();
+      case 5 -> copyOrMove(true);
+      case 6 -> copyOrMove(false);
+      case 7 -> deleteFile();
 
-      default:
-        System.out.println("Opción no válida");
-        break;
+      default -> System.out.println("Opción no válida");
     }
   }
 
   private static void input() {
-    int option = -1;
+    int option;
     do {
       System.out.printf("%n\t--¿Qué deseas hacer?--%n");
       System.out.printf("1. Crear carpeta almacén%n");
@@ -162,7 +155,7 @@ public class GestorBasicoDeArchivos {
         System.err.println("Introduce un número");
         option = -1;
       } catch (IOException e) {
-        System.err.println("Error: " + e);
+        System.err.println("Error al leer la opción del menú: " + e.getMessage());
         option = 0;
       }
     } while (option != 0);
