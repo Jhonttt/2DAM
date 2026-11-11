@@ -1,3 +1,5 @@
+es\ies\lazaro\utils\Colors.class
+es\ies\lazaro\model\Alumno.class
 es\ies\lazaro\db\ConnectionDB.class
 es\ies\lazaro\db\InitializeDB.class
 es\ies\lazaro\Main.class
