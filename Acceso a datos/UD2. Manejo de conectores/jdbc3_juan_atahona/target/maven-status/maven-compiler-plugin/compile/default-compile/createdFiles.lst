@@ -1,5 +1,12 @@
-es\ies\lazaro\utils\Colors.class
 es\ies\lazaro\model\Alumno.class
+es\ies\lazaro\service\CuentaService.class
+es\ies\lazaro\dao\MovimientoDAO.class
+es\ies\lazaro\utils\Colors.class
+es\ies\lazaro\dao\impl\CuentaDAOImpl.class
+es\ies\lazaro\dao\CuentaDAO.class
+es\ies\lazaro\model\Cuenta.class
 es\ies\lazaro\db\ConnectionDB.class
 es\ies\lazaro\db\InitializeDB.class
+es\ies\lazaro\dao\impl\MovimientoDAOImpl.class
+es\ies\lazaro\model\Movimiento.class
 es\ies\lazaro\Main.class

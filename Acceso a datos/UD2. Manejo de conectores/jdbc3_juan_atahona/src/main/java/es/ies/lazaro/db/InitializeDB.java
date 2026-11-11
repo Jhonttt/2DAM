@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class InitializeDB {
   public static void initialize() throws SQLException, IOException {
-    try (InputStream is = InitializeDB.class.getResourceAsStream("/resources/db/")) {
+    try (InputStream is = InitializeDB.class.getResourceAsStream("/db/schema.sql/")) {
       if (is == null) {
         throw new IOException("No se encuentra /db/schema.sql");
       }
