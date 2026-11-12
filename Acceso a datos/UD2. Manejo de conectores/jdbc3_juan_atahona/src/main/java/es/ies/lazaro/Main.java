@@ -1,7 +1,10 @@
 package es.ies.lazaro;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import es.ies.lazaro.dao.impl.CuentaDAOImpl;
 import es.ies.lazaro.dao.impl.MovimientoDAOImpl;
@@ -10,8 +13,11 @@ import es.ies.lazaro.service.CuentaService;
 import es.ies.lazaro.utils.Colors;
 
 public class Main {
+<<<<<<< Updated upstream
     private static final CuentaService SERVICE = new CuentaService(new CuentaDAOImpl(), new MovimientoDAOImpl());
 
+=======
+>>>>>>> Stashed changes
     private static void initialize() {
         try {
             InitializeDB.initialize();
@@ -23,6 +29,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+<<<<<<< Updated upstream
         initialize();
 
         // Ejercicio 1:
@@ -83,5 +90,9 @@ public class Main {
         }
 
         SERVICE.generateMovimientosReport();
+=======
+        // initialize();
+        
+>>>>>>> Stashed changes
     }
 }
