@@ -10,7 +10,7 @@ public class Ejercicio13 {
 
   private static void createFileWithUTF8() {
     try (BufferedWriter bw = new BufferedWriter(new FileWriter(p.toFile(), StandardCharsets.UTF_8))) {
-      bw.write("Hola que tál? ño muy bien");
+      bw.write("¿Hola, qué tal? Muy bien, ¿y tú? Año, canción, adiós");
     } catch (Exception e) {
       System.err.println("Error: " + e.getMessage());
     }

@@ -41,11 +41,6 @@ public class Ejercicio12 {
   }
 
   private static void saveClients() {
-    if (alumnos.isEmpty()) {
-      System.out.println(RED + "\nNo hay alumnos para guardar" + RESET);
-      return;
-    }
-
     try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FICHERO.toFile()))) {
       oos.writeObject(alumnos);
       System.out.println(GREEN + "\nAlumnos guardados correctamente" + RESET);
@@ -200,7 +195,7 @@ public class Ejercicio12 {
           continue;
         }
 
-        Alumno a = new Alumno(lastName, cicle, cicle, avgNote, nExp);
+        Alumno a = new Alumno(lastName, cicle, name, avgNote, nExp);
         alumnos.add(a);
         break;
       } catch (IOException | NumberFormatException e) {

@@ -10,16 +10,19 @@
     <alumno>
       <id>1</id>
       <nombre>Lucía</nombre>
+      <edad>19</edad>
       <ciclo>DAM</ciclo>
     </alumno>
     <alumno>
       <id>2</id>
       <nombre>Mario</nombre>
+      <edad>20</edad>
       <ciclo>DAM</ciclo>
     </alumno>
     <alumno>
-      <id>1</id>
+      <id>3</id>
       <nombre>Juan</nombre>
+      <edad>22</edad>
       <ciclo>DAM</ciclo>
     </alumno>
   </alumnos>

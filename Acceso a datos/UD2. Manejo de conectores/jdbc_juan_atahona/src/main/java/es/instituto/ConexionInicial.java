@@ -16,6 +16,7 @@ public final class ConexionInicial {
   private ConexionInicial() {
   }
 
+  // En caso de que la contraseña o el nombre de la base de datos es incorrecta se lanzaría el SQLException que se propaga y se captura donde se use, y ahí se hace un try catch donde se captura el SQLException o el Exception general y se pone un mensaje diciendo que es lo que fallo, donde ahí puedes ponerlo como quieras, yo suelo poner el e.getMessage()
   public static Connection getConnection() throws SQLException {
     Connection con = DriverManager.getConnection(URL, USER, PASS);
     System.out.println("Conexión establecida con: " + con.getCatalog());

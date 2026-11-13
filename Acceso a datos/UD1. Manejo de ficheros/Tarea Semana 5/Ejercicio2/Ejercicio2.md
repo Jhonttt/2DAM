@@ -20,6 +20,6 @@ Es un array de alumnos donde contiene 4 valores diferentes. El id que es un núm
 
 3. Comprueba que el JSON es válido y explica por qué la colección de alumnos se representa mediante un array.
    
-El JSON es válido ya que esta todo separado por comas menos el último aunque se podría poner y cada dato con su key (key - value). Se representa mediante un array para decir/indicar que van a haber muchos alumnos, y luego ya dentro de cada uno se ponen las propiedades de dicho alumno. 
+El JSON es válido ya que esta todo separado por comas menos el último, porque una coma final haría que un analizador estricto rechazara el documento, y cada dato con su key (key - value). Se representa mediante un array para decir/indicar que van a haber muchos alumnos, y luego ya dentro de cada uno se ponen las propiedades de dicho alumno. 
 
 Entrega: alumnos.json y análisis de la estructura.

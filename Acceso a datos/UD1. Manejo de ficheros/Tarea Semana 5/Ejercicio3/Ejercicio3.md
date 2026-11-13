@@ -11,6 +11,8 @@ El centro necesita representar un curso con su profesor responsable y el alumnad
    
 [Ejercicio3 XML](curso.xml)
 
+Comparando cada alumno por su id, los datos coinciden en JSON y XML: id 1 (Lucía, 19, DAM), id 2 (Mario, 20, DAM) e id 3 (Juan, 22, DAM).
+
 1. Explica al menos tres diferencias entre las estructuras XML y JSON obtenidas.
    
 1.- La cantidad de líneas

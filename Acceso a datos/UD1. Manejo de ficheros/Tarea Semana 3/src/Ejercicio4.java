@@ -8,9 +8,11 @@ public class Ejercicio4 {
   public static void main(String[] args) {
     try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
       String line;
+      int numLine = 1;
 
       while ((line = br.readLine()) != null) {
-        System.out.println(line);
+        System.out.println(numLine + ": " + line);
+        numLine++;
       }
 
     } catch (IOException e) {

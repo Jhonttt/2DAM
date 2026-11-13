@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.nio.file.Path;
+import java.util.ArrayList;
 
 public class Ejercicio9 {
 
@@ -14,12 +15,13 @@ public class Ejercicio9 {
   private static final String GREEN = "\u001B[32m";
   private static final Path FICHERO = Path.of("cursos.dat");
 
+  @SuppressWarnings("unchecked")
   private static void readData() {
     System.out.println(GREEN + "\nLeyendo los datos del fichero..." + RESET + "\n------------------------------");
 
     try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FICHERO.toFile()))) {
 
-      Curso[] cursos = (Curso[]) ois.readObject();
+      ArrayList<Curso> cursos = (ArrayList<Curso>) ois.readObject();
 
       for (Curso c : cursos) {
         System.out.printf("Nombre: %s%nDuración: %d horas%nProfesor: %s%nCorreo: %s%n-----------------------------%n",
@@ -33,7 +35,7 @@ public class Ejercicio9 {
     }
   }
 
-  private static void storeData(Curso... cursos) {
+  private static void storeData(ArrayList<Curso> cursos) {
     try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FICHERO.toFile()))) {
       oos.writeObject(cursos);
 
@@ -51,7 +53,12 @@ public class Ejercicio9 {
     Curso curso2 = new Curso("Desarrollo de Interfaces", 100, prof2);
     Curso curso3 = new Curso("Programación Multimedia", 80, prof1);
 
-    storeData(curso1, curso2, curso3);
+    ArrayList<Curso> cursos = new ArrayList<>();
+    cursos.add(curso1);
+    cursos.add(curso2);
+    cursos.add(curso3);
+
+    storeData(cursos);
     readData();
   }
 }

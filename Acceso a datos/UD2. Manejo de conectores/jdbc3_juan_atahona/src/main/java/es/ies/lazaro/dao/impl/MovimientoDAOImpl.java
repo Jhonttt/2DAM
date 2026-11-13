@@ -9,6 +9,7 @@ import java.sql.Statement;
 import com.jakewharton.fliptables.FlipTableConverters;
 
 import es.ies.lazaro.dao.MovimientoDAO;
+import es.ies.lazaro.utils.Colors;
 
 public class MovimientoDAOImpl implements MovimientoDAO {
 
@@ -31,7 +32,7 @@ public class MovimientoDAOImpl implements MovimientoDAO {
             if (!rs.isBeforeFirst()) {
                 System.out.println("No hay movimientos registrados (Tabla vacía).");
             } else {
-                System.out.println(FlipTableConverters.fromResultSet(rs));
+                System.out.println(Colors.WHITE + FlipTableConverters.fromResultSet(rs));
             }
         }
     }
@@ -44,7 +45,7 @@ public class MovimientoDAOImpl implements MovimientoDAO {
             if (!rs.isBeforeFirst()) {
                 System.out.println("No hay totales para mostrar (Tabla vacía).");
             } else {
-                System.out.println(FlipTableConverters.fromResultSet(rs));
+                System.out.println(Colors.WHITE + FlipTableConverters.fromResultSet(rs));
             }
         }
     }

@@ -49,7 +49,6 @@ public class GestionDeCalificaciones {
   }
 
   private static void addCalification() {
-    createCalification();
     try (
         BufferedWriter bw = new BufferedWriter(new FileWriter(CALIFICACIONES.toFile(), StandardCharsets.UTF_8, true))) {
       boolean flag = false;
@@ -157,7 +156,7 @@ public class GestionDeCalificaciones {
   private static void average() {
     try (BufferedReader br = new BufferedReader(new FileReader(CALIFICACIONES.toFile(), StandardCharsets.UTF_8))) {
       String line;
-      float total = 0;
+      double total = 0;
       int calification = 0;
 
       br.readLine();
@@ -190,6 +189,7 @@ public class GestionDeCalificaciones {
       System.out.printf("Introduce el nombre del usuario del que quieres acceder a toda su información: ");
       String name = BR.readLine();
       int calification = 0;
+      int matches = 0;
 
       String linea;
 
@@ -204,7 +204,7 @@ public class GestionDeCalificaciones {
 
         if (fields[NAME].equalsIgnoreCase(name.trim())) {
           System.out.printf("%s tiene un %.2f en %s%n", fields[NAME], Double.parseDouble(fields[NOTE]), fields[MODULE]);
-          return;
+          matches++;
         }
       }
 
@@ -213,7 +213,9 @@ public class GestionDeCalificaciones {
         return;
       }
 
-      System.out.println("No existe " + name);
+      if (matches == 0) {
+        System.out.println("No existe " + name);
+      }
 
     } catch (IOException e) {
       System.err.println("Error de entrada/salida: " + e.getMessage());
@@ -225,30 +227,13 @@ public class GestionDeCalificaciones {
 
   private static void options(int o) {
     switch (o) {
-      case 0:
-        System.out.println("Saliendo del proyecto...");
-        break;
-      case 1:
-        createCalification();
-        break;
-      case 2:
-        addCalification();
-        break;
-      case 3:
-        showAllNotes();
-        break;
-      case 4:
-        showAllApprovedNotes();
-        break;
-      case 5:
-        average();
-        break;
-      case 6:
-        findByName();
-        break;
-      default:
-        System.out.println("Opción no válida");
-        break;
+      case 0 -> System.out.println("Saliendo del proyecto...");
+      case 1 -> addCalification();
+      case 2 -> showAllNotes();
+      case 3 -> showAllApprovedNotes();
+      case 4 -> average();
+      case 5 -> findByName();
+      default -> System.out.println("Opción no válida");
     }
   }
 
@@ -256,12 +241,11 @@ public class GestionDeCalificaciones {
     int option = -1;
     do {
       System.out.printf("%n\t--¿Qué deseas hacer?--%n");
-      System.out.printf("1. Crear calificaciones.csv con cavecera%n");
-      System.out.printf("2. Añadir calificicón%n");
-      System.out.printf("3. Mostrar calificaciones%n");
-      System.out.printf("4. Mostrar calificaciones aprobadas%n");
-      System.out.printf("5. Calcular nota media%n");
-      System.out.printf("6. Buscar por nombre dol alumno%n");
+      System.out.printf("1. Añadir calificación%n");
+      System.out.printf("2. Mostrar calificaciones%n");
+      System.out.printf("3. Mostrar calificaciones aprobadas%n");
+      System.out.printf("4. Calcular nota media%n");
+      System.out.printf("5. Buscar por nombre del alumno%n");
       System.out.printf("0. Salir%n");
       System.out.printf("Opción: ");
       try {
@@ -278,6 +262,7 @@ public class GestionDeCalificaciones {
   }
 
   public static void main(String[] args) throws Exception {
+    createCalification();
     input();
     BR.close();
   }

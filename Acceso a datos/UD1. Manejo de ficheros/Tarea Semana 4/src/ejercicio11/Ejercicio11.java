@@ -40,11 +40,6 @@ public class Ejercicio11 {
   }
 
   private static void saveClients() {
-    if (clientes.isEmpty()) {
-      System.out.println(RED + "\nNo hay clientes para guardar" + RESET);
-      return;
-    }
-
     try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FICHERO.toFile()))) {
       oos.writeObject(clientes);
       System.out.println(GREEN + "\nClientes guardados correctamente" + RESET);

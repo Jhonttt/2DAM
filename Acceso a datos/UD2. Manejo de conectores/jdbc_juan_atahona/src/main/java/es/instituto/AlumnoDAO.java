@@ -23,7 +23,7 @@ public class AlumnoDAO {
     } catch (Exception e) {
       System.err.println(Colors.RED + "Error de MySQL: " + e.getMessage() + Colors.RESET);
     }
-    return null;
+    return List.of();
   }
 
   public static List<Alumno> selectAlumnosByCicle(String cicle) {
@@ -46,7 +46,7 @@ public class AlumnoDAO {
     } catch (Exception e) {
       System.err.println(Colors.RED + "Error de MySQL: " + e.getMessage() + Colors.RESET);
     }
-    return null;
+    return List.of();
   }
 
   public static List<Alumno> selectAlumnosByCicleAndAge(String cicle, int age) {
@@ -70,7 +70,7 @@ public class AlumnoDAO {
     } catch (Exception e) {
       System.err.println(Colors.RED + "Error de MySQL: " + e.getMessage() + Colors.RESET);
     }
-    return null;
+    return List.of();
   }
 
   public static void selectSummaryStudents() {
@@ -80,7 +80,7 @@ public class AlumnoDAO {
 
       try (ResultSet rs = ps.executeQuery()) {
         while (rs.next()) {
-          System.out.printf("%s | %d alumnos | edad media: %.1f%n",
+          System.out.printf("%s | %d alumnos | edad media: %.2f%n",
               rs.getString("ciclo"),
               rs.getInt("total"),
               rs.getDouble("edad_media"));

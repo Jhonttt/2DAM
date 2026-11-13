@@ -96,10 +96,10 @@ public class CuentaService {
 
   public void generateMovimientosReport() {
     try (Connection cn = ConnectionDB.getConnection()) {
-      System.out.println(Colors.ORANGE + "\n--- INFORME DE MOVIMIENTOS (Listado) ---" + Colors.RESET);
+      System.out.println(Colors.ORANGE + "\nINFORME DE MOVIMIENTOS" + Colors.RESET);
       movimientoDAO.showMovimientos(cn);
 
-      System.out.println(Colors.ORANGE + "--- TOTAL TRANSFERIDO POR CUENTA ORIGEN ---" + Colors.RESET);
+      System.out.println(Colors.ORANGE + "TOTAL TRANSFERIDO POR CUENTA ORIGEN");
       movimientoDAO.showTotalByOrigin(cn);
     } catch (SQLException e) {
       System.err.println(Colors.RED + "Error al generar informe: " + e.getMessage());
