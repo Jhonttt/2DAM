@@ -7,14 +7,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import es.ies.lazaro.utils.Colors;
-
 public final class DatabaseInitializer {
+  private DatabaseInitializer() {}
+
   public static void initialize() throws SQLException, IOException {
     try (InputStream is = DatabaseInitializer.class.getResourceAsStream("/db/schema.sql")) {
       if (is == null) {
-        System.out.println(Colors.RED + "No existe el fichero /db/schema.sql");
-        System.exit(1);
+        throw new IOException("No existe el fichero /db/schema.sql");
       }
 
       String script = new String(is.readAllBytes(), StandardCharsets.UTF_8);
