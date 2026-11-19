@@ -88,4 +88,5 @@ public final class Entrada {
   private static void error(String mensaje) {
     System.out.println(Colors.RED + mensaje + Colors.RESET);
   }
+
 }
