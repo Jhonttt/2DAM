@@ -16,7 +16,7 @@ public class Ejercicio2 {
     AlumnoDAO dao = new AlumnoDAOImpl();
 
     try {
-      List<Alumno> alumnos = dao.alumnoCicloEdad("DAM", 222);
+      List<Alumno> alumnos = dao.alumnoCicloEdad("DAM", 19);
       if (alumnos.isEmpty()) {
         error("Ningún alumno cumple con el filtro");
       } else {
