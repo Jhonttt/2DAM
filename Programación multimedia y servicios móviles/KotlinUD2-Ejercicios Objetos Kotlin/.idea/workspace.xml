@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1bafca8b-547e-42e9-9ed4-1797eb2a7230" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Kotlin2_EjerciciosClases.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD1. Manejo de ficheros/Tarea Semana 2/src/Ejercicio1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../UD1. Manejo de ficheros/Tarea Semana 2/src/Ejercicio1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Desarrollo de interfaces/UD1.- Confección de interfaces de usuario/Actividades de aprendizaje/di-dashboard-gestion-incidencias-atahona-sergeev" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Desarrollo de interfaces/UD1.- Confección de interfaces de usuario/Actividades de aprendizaje/di-dashboard-gestion-incidencias-atahona-sergeev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PSP/UD 1. Programación Multiproceso/Ejercicios Procesos I - Sigue practicando/src/ejercicio4/Ejercicio4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PSP/UD 1. Programación Multiproceso/Ejercicios Procesos I - Sigue practicando/src/ejercicio4/Ejercicio4.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LghoQQ56CAiB6d7Yqfgua8QAi1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.Ejercicio1Kt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.Ejercicio2Kt.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alumno/Documents/2DAM/Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/alumno/Documents/2DAM/Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/src/Main.kt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.19885057&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alumno\Documents\2DAM\Acceso a datos\UD2. Manejo de conectores\KotlinUD2-Ejercicios Objetos Kotlin" />
+    </key>
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.Ejercicio2Kt">
+    <configuration name="Ejercicio1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio1Kt" />
+      <module name="KotlinUD2-Ejercicios Objetos Kotlin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio2Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio2Kt" />
+      <module name="KotlinUD2-Ejercicios Objetos Kotlin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.Ejercicio2Kt" />
+        <item itemvalue="Kotlin.Ejercicio1Kt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bafca8b-547e-42e9-9ed4-1797eb2a7230" name="Changes" comment="" />
+      <created>1793881796341</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793881796341</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../.." />
+      <path value="$PROJECT_DIR$/../../../Desarrollo de interfaces/UD1.- Confección de interfaces de usuario/Actividades de aprendizaje/di-dashboard-gestion-incidencias-atahona-sergeev" />
+    </ignored-roots>
+  </component>
+</project>

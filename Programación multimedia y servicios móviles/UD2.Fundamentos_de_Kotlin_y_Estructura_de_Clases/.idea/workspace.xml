@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa5e26f2-64c2-4fcf-a7be-fdff9eb101c9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD1. Manejo de ficheros/Tarea Semana 2/src/Ejercicio1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos/UD1. Manejo de ficheros/Tarea Semana 2/src/Ejercicio1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo de interfaces/UD1.- Confección de interfaces de usuario/Actividades de aprendizaje/di-dashboard-gestion-incidencias-atahona-sergeev" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo de interfaces/UD1.- Confección de interfaces de usuario/Actividades de aprendizaje/di-dashboard-gestion-incidencias-atahona-sergeev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSP/UD 1. Programación Multiproceso/Ejercicios Procesos I - Sigue practicando/src/ejercicio4/Ejercicio4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSP/UD 1. Programación Multiproceso/Ejercicios Procesos I - Sigue practicando/src/ejercicio4/Ejercicio4.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UD2.Fundamentos_de_Kotlin_y_Estructura_de_Clases" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3KSF4ulNzGRyHSyQS4fCGYn6lDD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.UD2.Fundamentos_de_Kotlin_y_Estructura_de_Clases [:es.ies.kotlin.Ejercicio1Kt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UD2.Fundamentos_de_Kotlin_y_Estructura_de_Clases [:es.ies.kotlin.Ejercicio2Kt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UD2.Fundamentos_de_Kotlin_y_Estructura_de_Clases [:es.ies.kotlin.MainKt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/alumno/Documents/2DAM/Programación multimedia y servicios móviles/UD2.Fundamentos_de_Kotlin_y_Estructura_de_Clases/src/main/kotlin/Main.kt&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Kotlin.Ejercicio1Kt">
+    <configuration name="Ejercicio1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.ies.kotlin.Ejercicio1Kt" />
+      <module name="UD2.Fundamentos_de_Kotlin_y_Estructura_de_Clases.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio2Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.ies.kotlin.Ejercicio2Kt" />
+      <module name="UD2.Fundamentos_de_Kotlin_y_Estructura_de_Clases.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.Ejercicio1Kt" />
+        <item itemvalue="Kotlin.Ejercicio2Kt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa5e26f2-64c2-4fcf-a7be-fdff9eb101c9" name="Changes" comment="" />
+      <created>1791542876953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1791542876953</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

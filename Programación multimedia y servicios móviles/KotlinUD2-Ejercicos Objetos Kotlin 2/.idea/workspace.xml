@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="20b05ef5-030d-485e-84aa-a8b7172c85ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/Simulacro_Alumnado.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/java/es/ies/lazaro/GestionTienda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/java/es/ies/lazaro/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/java/es/ies/lazaro/Pregunta1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/java/es/ies/lazaro/dao/ProductoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/java/es/ies/lazaro/dao/impl/ProductoDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/java/es/ies/lazaro/db/ConnectionDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/java/es/ies/lazaro/db/DatabaseInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/java/es/ies/lazaro/model/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/java/es/ies/lazaro/utils/Colors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/src/main/resources/db/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/target/classes/ConnectionDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/ad1_simulacro_juan_atahona/target/classes/db/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/Kotlin2_EjerciciosClases.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/KotlinUD2-Ejercicios Objetos Kotlin.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/src/Ejercicio1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/src/Ejercicio2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicios Objetos Kotlin/src/utils/Colors.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/Kotlin2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/Kotlin2_EjerciciosClasesGetSet_ENUNCIADOS.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/KotlinUD2-Ejercicos Objetos Kotlin 2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/src/Ejercicio1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/src/Ejercicio2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/src/Ejercicio3.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/src/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc11_juan_atahona/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc11_juan_atahona/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc3_juan_atahona/src/main/java/es/ies/lazaro/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc3_juan_atahona/src/main/java/es/ies/lazaro/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc3_juan_atahona/src/main/java/es/ies/lazaro/model/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc3_juan_atahona/src/main/java/es/ies/lazaro/model/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc3_juan_atahona/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc3_juan_atahona/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc3_juan_atahona/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/jdbc3_juan_atahona/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/tareasemana1/src/main/java/es/instituto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos/UD2. Manejo de conectores/tareasemana1/src/main/java/es/instituto/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo de interfaces/UD1.- Confección de interfaces de usuario/Actividades de aprendizaje/di-dashboard-gestion-incidencias-atahona-sergeev" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo de interfaces/UD1.- Confección de interfaces de usuario/Actividades de aprendizaje/di-dashboard-gestion-incidencias-atahona-sergeev" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LjZatZDBt4qmjUWV6WjTGwoHIg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Kotlin.Ejercicio2Kt.executor": "Run",
+    "Kotlin.Ejercicio3Kt.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "Kotlin.RectanguloKt.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alumno/Documents/2DAM/Programación multimedia y servicios móviles/KotlinUD2-Ejercicos Objetos Kotlin 2",
+    "onboarding.tips.debug.path": "C:/Users/alumno/Documents/2DAM/Acceso a datos/UD2. Manejo de conectores/KotlinUD2-Ejercicos Objetos Kotlin 2/src/Main.kt",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alumno\Documents\2DAM\Acceso a datos\UD2. Manejo de conectores\KotlinUD2-Ejercicos Objetos Kotlin 2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.Ejercicio3Kt">
+    <configuration name="Ejercicio1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio1Kt" />
+      <module name="KotlinUD2-Ejercicos Objetos Kotlin 2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio2Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio2Kt" />
+      <module name="KotlinUD2-Ejercicos Objetos Kotlin 2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio3Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio3Kt" />
+      <module name="KotlinUD2-Ejercicos Objetos Kotlin 2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="KotlinUD2-Ejercicos Objetos Kotlin 2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.Ejercicio3Kt" />
+        <item itemvalue="Kotlin.Ejercicio2Kt" />
+        <item itemvalue="Kotlin.Ejercicio1Kt" />
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20b05ef5-030d-485e-84aa-a8b7172c85ae" name="Changes" comment="" />
+      <created>1793969505802</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793969505802</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../.." />
+      <path value="$PROJECT_DIR$/../../../Desarrollo de interfaces/UD1.- Confección de interfaces de usuario/Actividades de aprendizaje/di-dashboard-gestion-incidencias-atahona-sergeev" />
+      <path value="$PROJECT_DIR$/../.." />
+      <path value="$PROJECT_DIR$/../../Desarrollo de interfaces/UD1.- Confección de interfaces de usuario/Actividades de aprendizaje/di-dashboard-gestion-incidencias-atahona-sergeev" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
