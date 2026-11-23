@@ -13,10 +13,12 @@ public class Ejercicio4 {
     int cantidad = 0;
     String line;
 
+    
+
     while (true) {
       line = br.readLine();
 
-      if (line == null) {
+      if (line == null) { 
         System.out.println(Colors.RED + "Saliendo...");
         System.exit(0);
       }
