@@ -6,7 +6,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>es.ies.di</groupId>
-    <artifactId>ud3-contador-visual</artifactId>
+    <artifactId>contador_visual</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

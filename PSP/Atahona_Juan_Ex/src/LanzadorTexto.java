@@ -11,8 +11,8 @@ import utils.Colors;
 public class LanzadorTexto {
   private static final String SON = TransformadorTexto.class.getName();
 
-  private static void error(String msg) {
-    System.err.println(Colors.RED + msg);
+  private static void error(String msg, Exception e) {
+    System.err.println(Colors.RED + msg + ": " + e.getMessage());
   }
 
   public static void main(String[] args) {
@@ -42,13 +42,13 @@ public class LanzadorTexto {
 
     } catch (InterruptedException e) {
       Thread.currentThread().interrupt();
-      error("Error de interrupción: " + e.getMessage());
+      error("Error de interrupción", e);
       System.exit(1);
     } catch (IOException e) {
-      error("Error de entrada/salida: " + e.getMessage());
+      error("Error de entrada/salida", e);
       System.exit(1);
     } catch (Exception e) {
-      error("Error general: " + e.getMessage());
+      error("Error general", e);
       System.exit(1);
     }
 

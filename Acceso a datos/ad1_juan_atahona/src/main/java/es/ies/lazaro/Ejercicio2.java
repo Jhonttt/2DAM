@@ -10,7 +10,7 @@ import es.ies.lazaro.model.AlumnoXML;
 import es.ies.lazaro.utils.Colors;
 
 public class Ejercicio2 {
-  private static final String FILA = "%-4s %-10s %-5s %-5s";
+  private static final String FILA = "%s%-4s %-20s %-5s %-5s%s";
 
   public static void main(String[] args) {
     AlumnoDAO dao = new AlumnoDAOImpl();
@@ -41,12 +41,10 @@ public class Ejercicio2 {
   }
 
   private static void print(List<Alumno> alumnos) {
-    System.out.println(Colors.BLUE);
-    System.out.printf(FILA, "ID", "NOMBRE", "EDAD", "CICLO");
-    System.out.println("\n" + "-".repeat(27));
-    System.out.print(Colors.WHITE);
+    System.out.printf(FILA, Colors.BLUE, "ID", "NOMBRE", "EDAD", "CICLO", Colors.BLUE);
+    System.out.println("\n" + "-".repeat(37));
     alumnos.forEach(a -> {
-      System.out.printf(FILA, a.getId(), a.getNombre(), a.getEdad(), a.getCiclo());
+      System.out.printf(FILA, Colors.WHITE, a.getId(), a.getNombre(), a.getEdad(), a.getCiclo(), "");
       System.out.println();
     });
   }

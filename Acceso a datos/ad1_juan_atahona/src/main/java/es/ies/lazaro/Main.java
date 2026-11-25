@@ -26,7 +26,7 @@ public class Main {
          */
 
         // * Ejercico 2
-        // Ejercicio2.main(args);
+        Ejercicio2.main(args);
         // ? RA2.1
         /*
          * Enlazo el ciclo a ciclo = ? con ps.setString y la edad mínima a edad >= ? con

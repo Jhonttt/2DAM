@@ -51,7 +51,6 @@ public class Ejercicio1 {
               Colors.BLUE + "Posición " + Colors.RED + pos + ": "
                   + "la edad tiene que estar entre 1 y 120");
           invalido++;
-
           continue;
         }
 
